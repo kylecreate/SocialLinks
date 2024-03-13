@@ -1,0 +1,114 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+:root {
+    /* Colors */
+    --CLR-PRIMARY-GREEN: hsl(75, 94%, 57%);
+
+    --CLR-WHITE: hsl(0, 0%, 100%);
+    --CLR-GREY: hsl(0, 0%, 20%);
+    --CLR-DARKGREY: hsl(0, 0%, 12%);
+    --CLR-OFFBLACK: hsl(0, 0%, 8%);
+
+    /* Font */
+    --FF: "Inter", sans-serif;
+
+    --FS-BODY: 0.875rem; /* 14px */
+
+    --FW-400: 400;
+    --FW-600: 600;
+    --FW-700: 700;
+
+    /* Styles */
+}
+
+/* General Styles */
+body {
+    background-color: var(--CLR-OFFBLACK);
+    color: var(--CLR-WHITE);
+    font-family: var(--FF);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Overall Container/wrapper */
+.wrapper {
+    width: 26em;
+    background-color: var(--CLR-DARKGREY);
+    padding: 2.5em;
+    margin: 0 auto;
+    border-radius: 0.875em;
+}
+
+/* User Info */
+.profile-picture {
+    width: 6em;
+    height: 6em;
+    border-radius: 3.5em;
+}
+
+.user-name {
+    font-weight: var(--FW-700);
+    font-size: 1.25rem;
+    margin-top: 1.25em;
+}
+
+.user-location {
+    font-weight: var(--FW-600);
+    font-size: 1rem;
+    margin-top: 0.525em;
+    color: var(--CLR-PRIMARY-GREEN);
+    padding-bottom: 0.95em;
+}
+
+.user-desc {
+    font-weight: var(--FW-400);
+    font-size: 0.85rem;
+}
+
+/* Social Media Links */
+.social-links {
+    display: grid;
+    font-weight: var(--FW-600);
+    margin-top: 1.25em;
+    gap: 1.25em;
+}
+
+.social-links a {
+    text-decoration: none;
+    background-color: var(--CLR-GREY);
+    color: var(--CLR-WHITE);
+    height: 2.813em;
+    border-radius: 0.5em;
+    font-size: var(--FS-BODY);
+    padding: 0.938em 0;
+}
+
+.social-links a:hover {
+    background-color: var(--CLR-PRIMARY-GREEN);
+    cursor: pointer;
+    color: var(--CLR-OFFBLACK);
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 45em) {
+    .wrapper {
+        margin-top: 5%;
+        max-width: 21em;
+    }
+
+    .user-desc {
+        font-size: 0.8em;
+    }
+}
